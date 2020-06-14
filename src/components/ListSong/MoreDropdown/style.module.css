@@ -1,0 +1,24 @@
+
+.dropdownContent {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 0px;
+    border-radius: 8px;
+    min-width: 220px;
+    background-color: #fcfcfc;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.dropdownContent a {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #32323d;
+    width: 100%;
+    font-weight: 400;
+    background-color: inherit;
+    display: inline-block;
+}

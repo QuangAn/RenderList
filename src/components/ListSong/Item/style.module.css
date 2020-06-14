@@ -1,0 +1,186 @@
+.arrowUp {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 10px solid #1dc186;
+}
+
+.arrowDown {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 10px solid #e35050;
+}
+
+.chartItem {
+    padding: 10px 0;
+    border-bottom: 1px solid #efefef;
+ 
+}
+
+.chartItem:hover,
+.chartItem.active {
+    background-color: #f3f3f3;
+}
+
+.detailSong {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.sort {
+    width: 75px;
+    font-weight: 500;
+    text-align: center;
+    margin-right: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.sortNumber {
+    width: 50px;
+    padding-right: 5px;
+}
+
+.chartItem:nth-child(1) .sortNumber {
+    color: #4a90e2;
+}
+
+.chartItem:nth-child(2) .sortNumber {
+    color: #50e3c2;
+}
+
+.chartItem:nth-child(3) .sortNumber {
+    color: #e4340d;
+}
+
+.sortReal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.sortReal .num {
+    font-size: 12px;
+}
+
+.thumb {
+    position: relative;
+    overflow: hidden;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.opac {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+    visibility: hidden;
+}
+
+.playIcon {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    margin-top: -8px;
+    margin-left: -8px;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.chartItem:hover .opac,
+.chartItem:hover .playIcon {
+    visibility: visible;
+}
+
+.thumb img {
+    width: 40px;
+    height: 40px;
+}
+
+.infoSong {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 45%;
+    word-break: break-word;
+    white-space: nowrap;
+    position: relative;
+}
+
+.infoSong .title {
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    text-align: left;
+    color: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.infoSong .artist {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.33;
+    color: #a0a0a0;
+    margin-top: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.duration {
+    display: flex;
+    align-items: center;
+    line-height: normal;
+    width: 10%;
+    text-align: center;
+    font-size: 12px;
+    color: #a0a0a0;
+    user-select: none;
+}
+
+.extension {
+    width: 40%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+
+.listButtons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+.listButtons li {
+    padding: 10px;
+}
+
+.listButtons li * {
+    cursor: pointer;
+}

@@ -1,0 +1,67 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "sortReal": 3,
+            "singer": "Chi Dân",
+            "duration": "04:15",
+            "title": "Chỉ cần anh giả vờ",
+            "image": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/c/f/8/7/cf87ec212f04804d4799837e4ab26089.jpg",
+            "viewed": "5550"
+        },
+        {
+            "id": 2,
+            "sortReal": 5,
+            "singer": "Vicky Nhung",
+            "duration": "04:20",
+            "title": "Giá Như Ta Chẳng Biết Nhau",
+            "image": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/f/f/a/c/ffac92edc77d12565efa0f100e9b7dd9.jpg",
+            "viewed": "5550"
+        },
+        {
+            "id": 3,
+            "sortReal": -3,
+            "singer": "H2K,KN",
+            "duration": "03:26",
+            "title": "Mặt trời bé con",
+            "image": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/d/a/b/c/dabc503fb0131422c86a9660a415803f.jpg",
+            "viewed": "5550"
+        },
+        {
+            "id": 4,
+            "sortReal": -2,
+            "singer": "Vicky Nhung",
+            "duration": "04:20",
+            "title": "Giá Như Ta Chẳng Biết Nhau",
+            "image": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/f/f/a/c/ffac92edc77d12565efa0f100e9b7dd9.jpg",
+            "viewed": "5550"
+        },
+        {
+            "id": 5,
+            "sortReal": 5,
+            "singer": "Vicky Nhung",
+            "duration": "04:20",
+            "title": "Giá Như Ta Chẳng Biết Nhau",
+            "image": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/f/f/a/c/ffac92edc77d12565efa0f100e9b7dd9.jpg",
+            "viewed": "5550"
+        },
+        {
+            "id": 6,
+            "sortReal": -10,
+            "singer": "Vicky Nhung",
+            "duration": "04:20",
+            "title": "Giá Như Ta Chẳng Biết Nhau",
+            "image": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/f/f/a/c/ffac92edc77d12565efa0f100e9b7dd9.jpg",
+            "viewed": "5550"
+        },
+        {
+            "id": 7,
+            "sortReal": 6,
+            "singer": "Vicky Nhung",
+            "duration": "04:20",
+            "title": "Giá Như Ta Chẳng Biết Nhau",
+            "image": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/f/f/a/c/ffac92edc77d12565efa0f100e9b7dd9.jpg",
+            "viewed": "5550"
+        }
+    ]
+}
