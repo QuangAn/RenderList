@@ -1,2 +1,0 @@
-# RenderList
-Created with CodeSandbox
