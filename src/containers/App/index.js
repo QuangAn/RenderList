@@ -3,11 +3,12 @@ import './App.css';
 import { Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ListSong from '../../components/ListSong'
+import data from "../../data/db.json";
 import { getPosts } from '../../request';
 import $ from 'jquery'
 
 function App() {
-    const [items, setItems] = useState([])
+    const [items, setItems] = useState(data.items)
     const [isOpenDropDown, setIsOpenDropDown] = useState(false);
     const [positionX, setPositionX] = useState();
     const [positionY, setPositionY] = useState();
