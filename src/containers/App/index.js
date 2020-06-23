@@ -7,6 +7,15 @@ import data from "../../data/db.json";
 import { getPosts } from '../../request';
 import $ from 'jquery'
 
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    useParams
+  } from "react-router-dom";
+import Nav from './Nav';
+
 function App() {
     const [items, setItems] = useState(data.items)
     const [isOpenDropDown, setIsOpenDropDown] = useState(false);
@@ -42,17 +51,22 @@ function App() {
         top: positionY
     }
     return (
-        <div className="App" onClick={handleWrapClick} >
-            <Container> 
-                <ListSong 
-                    iconMoreClick = {handleIconMoreClick}
-                    rightClickItem = {handleRightClickItem}
-                    isOpenDropDown = {isOpenDropDown}
-                    styleDropdown = {styleDropdown}
-                    songs={items} 
-                />
-            </Container>
-        </div>
+        <Router>
+            <div className="App" onClick={handleWrapClick} >
+                <Nav />
+                <Container> 
+                    <Route path="/ListSong">
+                        <ListSong 
+                            iconMoreClick = {handleIconMoreClick}
+                            rightClickItem = {handleRightClickItem}
+                            isOpenDropDown = {isOpenDropDown}
+                            styleDropdown = {styleDropdown}
+                            songs={items} 
+                        />
+                    </Route>
+                </Container>
+            </div>
+        </Router>
     );
 }
 

@@ -7,20 +7,17 @@ const mainInstance = axios.create({
   headers: {'X-Custom-Header': 'foobar'},
 });
 
-mainInstance.interceptors.response.use(function (response) {
-  // Any status code that lie within the range of 2xx cause this function to trigger
-  // Do something with response data
-  const newResponse = {...response, data: [{userId: '10', title: 'Yolo', body: 'Xyz'}, ...response.data] }
-  return newResponse;
-}, function (error) {
-  // Any status codes that falls outside the range of 2xx cause this function to trigger
-  // Do something with response error
-  return Promise.reject(error);
-});
+
 
 export function getPosts() {
   return mainInstance({
     url: '/posts',
+    method: 'get'
+  });
+};
+export function getPostById(postId = 1) {
+  return mainInstance({
+    url: `/posts/${postId}`,
     method: 'get'
   });
 };
