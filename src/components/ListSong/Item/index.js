@@ -29,9 +29,11 @@ function Item(props) {
                     </div>
                 </div>
                 <div className={styles.thumb}>
-                    <span className={styles.playIcon}><FaPlay color='white' /></span>
-                    <img src={props.image} alt={props.title} />
-                    <span className={styles.opac}></span>
+                    <Link className={styles.title} to={`/Song/${props.id}`}>
+                        <span className={styles.playIcon}><FaPlay color='white' /></span>
+                        <img src={props.image} alt={props.title} />
+                        <span className={styles.opac}></span>
+                    </Link>
                 </div>
                 <div className={styles.infoSong}>
                 <Link className={styles.title} to={`/Song/${props.id}`}><span>{props.title}</span></Link>
