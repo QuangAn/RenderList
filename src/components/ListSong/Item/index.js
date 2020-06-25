@@ -2,7 +2,7 @@ import React from 'react';
 import { FaMicrophone, FaPlay, FaEllipsisH, FaRegHeart } from 'react-icons/fa';
 import MoreDropdown from '../MoreDropdown';
 import styles from './style.module.css';
-
+import { Link } from 'react-router-dom'
 Item.defaultProps = {
     duration: "00:00",
     id: 1,
@@ -18,6 +18,7 @@ function Item(props) {
     return (
         <li onContextMenu= {rightClickItem} key={props.id} className={styles.chartItem}>
             <div className={styles.detailSong}>
+                
                 <div className={styles.sort}>
                     <div className={styles.sortNumber}>
                         <span>{props.id}</span>
@@ -33,7 +34,7 @@ function Item(props) {
                     <span className={styles.opac}></span>
                 </div>
                 <div className={styles.infoSong}>
-                    <span className={styles.title}>{props.title}</span>
+                <Link className={styles.title} to={`/Song/${props.id}`}><span>{props.title}</span></Link>
                     <span className={styles.artist}>{props.singer}</span>
                 </div>
                 <div className={styles.duration}>

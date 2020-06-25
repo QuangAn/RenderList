@@ -1,20 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
-import { Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ListSong from '../../components/ListSong'
-import data from "../../data/db.json";
-import { getPosts } from '../../request';
-import $ from 'jquery'
-
+import $ from 'jquery';
+import React, { useEffect, useState } from 'react';
+import { Container } from 'react-bootstrap';
 import {
     BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useParams
-  } from "react-router-dom";
+
+    Route
+} from "react-router-dom";
+import ListSong from '../../components/ListSong';
+import SongDetail from '../../components/SongDetail';
+import data from "../../data/db.json";
+import { getPosts } from '../../request';
+import './App.css';
 import Nav from './Nav';
+
 
 function App() {
     const [items, setItems] = useState(data.items)
@@ -64,6 +63,7 @@ function App() {
                             songs={items} 
                         />
                     </Route>
+                    <Route path="/Song/:id" component={SongDetail} />
                 </Container>
             </div>
         </Router>
