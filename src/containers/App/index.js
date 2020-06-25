@@ -4,15 +4,17 @@ import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import {
     BrowserRouter as Router,
-
-    Route
+    Route,
+    Switch
 } from "react-router-dom";
 import ListSong from '../../components/ListSong';
 import SongDetail from '../../components/SongDetail';
+import NotFoundPage from '../NotFoundPage';
+import HomePage from '../HomePage';
 import data from "../../data/db.json";
 import { getPosts } from '../../request';
 import './App.css';
-import Nav from './Nav';
+import Nav from '../../components/Nav';
 
 
 function App() {
@@ -54,16 +56,20 @@ function App() {
             <div className="App" onClick={handleWrapClick} >
                 <Nav />
                 <Container> 
-                    <Route path="/ListSong">
-                        <ListSong 
-                            iconMoreClick = {handleIconMoreClick}
-                            rightClickItem = {handleRightClickItem}
-                            isOpenDropDown = {isOpenDropDown}
-                            styleDropdown = {styleDropdown}
-                            songs={items} 
-                        />
-                    </Route>
-                    <Route path="/Song/:id" component={SongDetail} />
+                    <Switch>
+                        <Route path="/ListSong">
+                            <ListSong 
+                                iconMoreClick = {handleIconMoreClick}
+                                rightClickItem = {handleRightClickItem}
+                                isOpenDropDown = {isOpenDropDown}
+                                styleDropdown = {styleDropdown}
+                                songs={items} 
+                            />
+                        </Route>
+                        <Route path="/Song/:id" component={SongDetail} />
+                        <Route path="/404" component={NotFoundPage} />
+                        <Route path="/" component={HomePage} />
+                    </Switch>
                 </Container>
             </div>
         </Router>
