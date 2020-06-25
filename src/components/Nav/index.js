@@ -7,7 +7,7 @@ function Nav() {
             <ul className="list">
                 <li><NavLink activeClassName='is-active' exact to="/">Home</NavLink></li>
                 <li><NavLink activeClassName='is-active' to="/ListSong">List Song</NavLink></li>
-                <li><NavLink to="/Song/allibaba">allibaba</NavLink></li>
+                <li><NavLink to="/Song/alibaba">allibaba</NavLink></li>
             </ul>
         </nav>
     );

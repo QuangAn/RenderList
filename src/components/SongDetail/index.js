@@ -14,7 +14,7 @@ function SongDetail({  match }) {
     }
     return (
         <div>
-            {itemId === 'allibaba' && <Redirect to="/404" /> }
+            {itemId === 'alibaba' && <Redirect to="/404" /> }
             <h2>Song Detail</h2>
             <ul style={style}>
                 <li><strong>Id:</strong> {items.id}</li>
